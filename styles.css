@@ -1,0 +1,28 @@
+
+#container {
+    margin: auto;
+   
+}
+.grid {
+    border: 2px solid black;
+    display: grid;
+    align-content: stretch;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    margin: auto;
+    height:600px;
+    width: 600px;
+}
+
+.column {
+ 
+
+}
+
+.row {
+    background-color: salmon;
+    border: 0.5px solid black;
+  
+    aspect-ratio: 1;
+    
+}
