@@ -1,8 +1,4 @@
 
-#container {
-    margin: auto;
-   
-}
 
 .grid {
     border: 2px solid black;
@@ -19,7 +15,3 @@
     
 }
 
-.row:hover {
-    background-color: black;
-    
-}

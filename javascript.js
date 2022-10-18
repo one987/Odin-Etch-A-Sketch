@@ -1,6 +1,6 @@
 
 
-const container = document.querySelector('#main');
+const main = document.querySelector('#main');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
@@ -23,6 +23,11 @@ function createGrid(c, r) {
             row.addEventListener("mouseover", () => {
                 row.style.backgroundColor = 'blue';
             });
+            const btn = document.querySelector('#btn');
+            btn.addEventListener('click', () => {
+                row.style.backgroundColor = '#7B68EE';
+            });
+            
             column.appendChild(row);
         }
         grid.appendChild(column);
