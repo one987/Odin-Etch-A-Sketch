@@ -1,7 +1,12 @@
+body {
+    background-color: #B0C4DE;
+}
+
 header,
 footer {
     display: flex;
     justify-content: center;
+    
 }
 
 #main {
@@ -28,7 +33,7 @@ footer {
 }
 
 .row {
-    background-color: #7B68EE;
+    background-color: #F8F8FF;
     /*border: 0.5px solid black;*/
     aspect-ratio: 1;
 

@@ -23,10 +23,23 @@ function createGrid(c, r) {
             row.addEventListener("mouseover", () => {
                 row.style.backgroundColor = 'blue';
             });
-            const btn = document.querySelector('#btn'); //reset button
-            btn.addEventListener('click', () => {
-                row.style.backgroundColor = '#7B68EE';
+            const clear = document.querySelector('#clear'); //reset button
+            clear.addEventListener('click', () => {
+                row.style.backgroundColor = '#F8F8FF';
             });
+            const black = document.querySelector('#black'); //black button
+            black.addEventListener('click', () => {
+                row.addEventListener("mouseover", () => {
+                    row.style.backgroundColor = 'black';
+                });
+            });
+            const erase = document.querySelector('#erase'); //erase button
+            erase.addEventListener('click', () => {
+                row.addEventListener("mouseover", () => {
+                    row.style.backgroundColor = '#F8F8FF';
+                });
+            });
+
 
             column.appendChild(row);
         }
