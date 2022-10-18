@@ -4,6 +4,13 @@ const main = document.querySelector('#main');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
+const test = document.querySelector('#test'); //testing a button that remmoves the grid and replaces with a new one
+test.addEventListener('click', () => {
+    main.removeChild(grid);
+    createGrid(16, 16); //doesn't work properly
+    
+});
+
 
 
 //function that generates a grid of divs
@@ -50,4 +57,4 @@ function createGrid(c, r) {
 
 }
 
-createGrid(100, 100);
+createGrid(64, 64);
