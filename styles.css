@@ -18,3 +18,8 @@
     aspect-ratio: 1;
     
 }
+
+.row:hover {
+    background-color: black;
+    
+}

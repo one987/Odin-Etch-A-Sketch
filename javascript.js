@@ -11,22 +11,25 @@ function createGrid(c, r) {
     let columns = c;
     let rows = r;
 
-for (let i = 0; i < columns; ++i) {
-    let column = document.createElement('div');
-    column.className = 'column';
-    grid.style.gridTemplateColumns = `repeat(${c}, 1fr)`;
-    
-    for (let j = 0; j < rows; ++j) {
-        let row = document.createElement('div');
-        row.className = 'row';
-        grid.style.gridTemplateRows = `repeat(${r}, 1fr)`;
-        column.appendChild(row);
+    for (let i = 0; i < columns; ++i) {
+        let column = document.createElement('div');
+        column.className = 'column';
+        grid.style.gridTemplateColumns = `repeat(${c}, 1fr)`;
+
+        for (let j = 0; j < rows; ++j) {
+            let row = document.createElement('div');
+            row.className = 'row';
+            grid.style.gridTemplateRows = `repeat(${r}, 1fr)`;
+            row.addEventListener("mouseover", () => {
+                row.style.backgroundColor = 'blue';
+            });
+            column.appendChild(row);
+        }
+        grid.appendChild(column);
+
     }
-    grid.appendChild(column);
-    
-}
-main.appendChild(grid);
+    main.appendChild(grid);
 
 }
 
-createGrid(16,16);
+createGrid(64, 64);
