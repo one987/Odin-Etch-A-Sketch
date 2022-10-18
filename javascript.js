@@ -23,11 +23,11 @@ function createGrid(c, r) {
             row.addEventListener("mouseover", () => {
                 row.style.backgroundColor = 'blue';
             });
-            const btn = document.querySelector('#btn');
+            const btn = document.querySelector('#btn'); //reset button
             btn.addEventListener('click', () => {
                 row.style.backgroundColor = '#7B68EE';
             });
-            
+
             column.appendChild(row);
         }
         grid.appendChild(column);
@@ -37,4 +37,4 @@ function createGrid(c, r) {
 
 }
 
-createGrid(64, 64);
+createGrid(100, 100);

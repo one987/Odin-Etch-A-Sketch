@@ -1,17 +1,39 @@
+header,
+footer {
+    display: flex;
+    justify-content: center;
+}
 
+#main {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
 
 .grid {
     border: 2px solid black;
     display: grid;
-    margin: auto;
-    height:600px;
+    height: 600px;
     width: 600px;
 }
 
 .row {
     background-color: #7B68EE;
-    border: 0.5px solid black;
+    /*border: 0.5px solid black;*/
     aspect-ratio: 1;
-    
+
 }
 
+footer {
+    margin-top: 40px;
+}

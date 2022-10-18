@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,27 @@
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div id="main"></div>
-    <button type ="button" id = btn>Reset</button>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
+    <div id="main">
+        <div class="menu">
+            <button type="button" id=btn4>black</button>
+            <button type="button" id=btn3>Rainbow</button>
+            <button type="button" id=btn2>Erase</button>
+            <button type="button" id=btn>clear</button>
+            <div class="slidecontainer">
+                <div>grid size</div>
+                <input type="range" min="16" max="100" value="50" class="slider" id="myRange">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>created by one987</div>
+    </footer>
 </body>
+
 </html>
