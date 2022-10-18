@@ -7,7 +7,7 @@ grid.classList.add('grid');
 const test = document.querySelector('#test'); //testing a button that remmoves the grid and replaces with a new one
 test.addEventListener('click', () => {
     main.removeChild(grid);
-    createGrid(16, 16); //doesn't work properly
+   // createGrid(16, 16); doesn't work properly
     
 });
 
@@ -15,15 +15,13 @@ test.addEventListener('click', () => {
 
 //function that generates a grid of divs
 function createGrid(c, r) {
-    let columns = c;
-    let rows = r;
 
-    for (let i = 0; i < columns; ++i) {
+    for (let i = 0; i < c; ++i) {
         let column = document.createElement('div');
         column.className = 'column';
         grid.style.gridTemplateColumns = `repeat(${c}, 1fr)`;
 
-        for (let j = 0; j < rows; ++j) {
+        for (let j = 0; j < r; ++j) {
             let row = document.createElement('div');
             row.className = 'row';
             grid.style.gridTemplateRows = `repeat(${r}, 1fr)`;
