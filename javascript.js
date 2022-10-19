@@ -1,30 +1,31 @@
 
-
 const main = document.querySelector('#main');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
+
+
 const test = document.querySelector('#test'); //testing a button that remmoves the grid and replaces with a new one
 test.addEventListener('click', () => {
-    main.removeChild(grid);
-   // createGrid(16, 16); doesn't work properly
-    
+    grid.innerHTML = "";
+    createGrid(16);
 });
 
 
 
-//function that generates a grid of divs
-function createGrid(c, r) {
 
-    for (let i = 0; i < c; ++i) {
+//function that generates a grid of divs
+function createGrid(cr) {
+
+    for (let i = 0; i < cr; ++i) {
         let column = document.createElement('div');
         column.className = 'column';
-        grid.style.gridTemplateColumns = `repeat(${c}, 1fr)`;
+        grid.style.gridTemplateColumns = `repeat(${cr}, 1fr)`;
 
-        for (let j = 0; j < r; ++j) {
+        for (let j = 0; j < cr; ++j) {
             let row = document.createElement('div');
             row.className = 'row';
-            grid.style.gridTemplateRows = `repeat(${r}, 1fr)`;
+            grid.style.gridTemplateRows = `repeat(${cr}, 1fr)`;
             row.addEventListener("mouseover", () => {
                 row.style.backgroundColor = 'blue';
             });
@@ -44,15 +45,15 @@ function createGrid(c, r) {
                     row.style.backgroundColor = '#F8F8FF';
                 });
             });
-
-
+            
             column.appendChild(row);
         }
         grid.appendChild(column);
-
     }
     main.appendChild(grid);
-
 }
 
-createGrid(64, 64);
+window.onload = function () {
+    createGrid(64);
+};
+
