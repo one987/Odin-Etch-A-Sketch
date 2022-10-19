@@ -3,18 +3,19 @@ const main = document.querySelector('#main');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
-
-const test = document.querySelector('#test'); //testing a button that remmoves the grid and replaces with a new one
-test.addEventListener('click', () => {
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+    output.innerHTML = this.value;
     grid.innerHTML = "";
-    createGrid(16);
-});
+    createGrid(`${this.value}`);
+};
 
 
-
-
-//function that generates a grid of divs
+//function that generates a grid of divs. Need to refactor to fix scope issues
 function createGrid(cr) {
 
     for (let i = 0; i < cr; ++i) {
@@ -45,7 +46,7 @@ function createGrid(cr) {
                     row.style.backgroundColor = '#F8F8FF';
                 });
             });
-            
+
             column.appendChild(row);
         }
         grid.appendChild(column);
