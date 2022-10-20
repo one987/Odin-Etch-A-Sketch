@@ -1,35 +1,38 @@
 body {
-    background-color: #B0C4DE;
+    background-color: #E6E6FA;
 }
 
 header,
-footer {
+footer,
+#main {
     display: flex;
     justify-content: center;
     
 }
 
 #main {
-    display: flex;
-    justify-content: center;
     gap: 60px;
     margin-top: 40px;
 
 }
 
-.menu {
+.menu,
+.slidecontainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
     align-items: center;
+}
+
+.menu {
+    gap: 30px;
 }
 
 .grid {
     border: 2px solid black;
     display: grid;
-    height: 608px;
-    width: 608px;
+    height: 592px;
+    width: 592px;
 }
 
 .cell {
@@ -42,4 +45,14 @@ footer {
 
 footer {
     margin-top: 40px;
+}
+
+
+.btn {
+ 
+  
+}
+
+.btn:hover {
+ 
 }

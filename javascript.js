@@ -3,16 +3,15 @@ const main = document.querySelector('#main');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
+//slider grid resizer
 let slider = document.getElementById("myRange");
 let output = document.getElementById("demo");
 output.innerHTML = slider.value;
-// Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
     output.innerHTML = this.value;
     grid.innerHTML = "";
     createGrid(`${this.value}`);
 };
-
 
 //function that generates a grid of divs. Need to refactor to fix scope issues
 function createGrid(cr) {
@@ -27,20 +26,10 @@ function createGrid(cr) {
         cell.addEventListener("mouseover", () => {
             cell.style.backgroundColor = 'black';
         });
-        const clear = document.querySelector('#clear'); //shake button
-        clear.addEventListener('click', () => {
-            cell.style.backgroundColor = '#F8F8FF';
-        });
         const black = document.querySelector('#black'); //black button
         black.addEventListener('click', () => {
             cell.addEventListener("mouseover", () => {
                 cell.style.backgroundColor = 'black';
-            });
-        });
-        const erase = document.querySelector('#erase'); //erase button
-        erase.addEventListener('click', () => {
-            cell.addEventListener("mouseover", () => {
-                cell.style.backgroundColor = '#F8F8FF';
             });
         });
         const rgb = document.querySelector('#rgb'); //rainbow button
@@ -49,7 +38,18 @@ function createGrid(cr) {
             cell.addEventListener('mouseover', () => {
                 cell.style.backgroundColor = `${color}`;
             } )
-        } )
+        });
+        const erase = document.querySelector('#erase'); //eraser button
+        erase.addEventListener('click', () => {
+            cell.addEventListener("mouseover", () => {
+                cell.style.backgroundColor = '#F8F8FF';
+            });
+        });
+        const clear = document.querySelector('#clear'); //shake button
+        clear.addEventListener('click', () => {
+            cell.style.backgroundColor = '#F8F8FF';
+        });
+        
         grid.appendChild(cell);
     }
     main.appendChild(grid);
