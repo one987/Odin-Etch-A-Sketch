@@ -6,7 +6,6 @@ grid.classList.add('grid');
 let slider = document.getElementById("myRange");
 let output = document.getElementById("demo");
 output.innerHTML = slider.value;
-
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
     output.innerHTML = this.value;
@@ -26,9 +25,9 @@ function createGrid(cr) {
         cell.className = 'cell';
 
         cell.addEventListener("mouseover", () => {
-            cell.style.backgroundColor = 'blue';
+            cell.style.backgroundColor = 'black';
         });
-        const clear = document.querySelector('#clear'); //reset button
+        const clear = document.querySelector('#clear'); //shake button
         clear.addEventListener('click', () => {
             cell.style.backgroundColor = '#F8F8FF';
         });
@@ -44,7 +43,13 @@ function createGrid(cr) {
                 cell.style.backgroundColor = '#F8F8FF';
             });
         });
-
+        const rgb = document.querySelector('#rgb'); //rainbow button
+        rgb.addEventListener('click', () => {
+            let color =  "#" + Math.random().toString(16).slice(2, 8); //thanks Stack Overflow ;)
+            cell.addEventListener('mouseover', () => {
+                cell.style.backgroundColor = `${color}`;
+            } )
+        } )
         grid.appendChild(cell);
     }
     main.appendChild(grid);

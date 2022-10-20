@@ -28,12 +28,13 @@ footer {
 .grid {
     border: 2px solid black;
     display: grid;
-    height: 600px;
-    width: 600px;
+    height: 608px;
+    width: 608px;
 }
 
 .cell {
     background-color: #F8F8FF;
+    transition: 0.2s;
     /*border: 0.5px solid black;*/
     aspect-ratio: 1;
 
