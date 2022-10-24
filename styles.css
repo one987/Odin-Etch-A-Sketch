@@ -1,5 +1,12 @@
 body {
-    background-color: #E6E6FA;
+    font-family: Roboto, sans-serif;
+    background-color: lavender;
+    color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header,
@@ -7,17 +14,30 @@ footer,
 #main {
     display: flex;
     justify-content: center;
-    
 }
 
 #main {
-    gap: 60px;
-    margin-top: 40px;
+    flex: 1;
+    gap: 50px;
+}
 
+footer {
+    font-size: 18px;
+    color: #e6630b;
+    background-color: #191970;
+    align-items: center;
+    width: 100vw;
+    min-height: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .menu,
 .slidecontainer {
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,30 +49,63 @@ footer,
 }
 
 .grid {
-    border: 2px solid black;
+    border: 3px solid black;
     display: grid;
-    height: 592px;
-    width: 592px;
+    height: 600px;
+    width: 600px;
 }
 
 .cell {
-    background-color: #F8F8FF;
+    background-color: snow;
     transition: 0.2s;
     /*border: 0.5px solid black;*/
     aspect-ratio: 1;
-
 }
 
-footer {
-    margin-top: 40px;
+.slider {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 10px;
 }
 
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #191970 ;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
 
 .btn {
- 
-  
+    font-size: 16px;
+    background-color: lavender;
+    width: 150px;
+    border: 2px solid black;
+    padding: 5px;
 }
 
 .btn:hover {
- 
+    background-color: snow;
 }

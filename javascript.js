@@ -42,12 +42,12 @@ function createGrid(cr) {
         const erase = document.querySelector('#erase'); //eraser button
         erase.addEventListener('click', () => {
             cell.addEventListener("mouseover", () => {
-                cell.style.backgroundColor = '#F8F8FF';
+                cell.style.backgroundColor = 'snow';
             });
         });
         const clear = document.querySelector('#clear'); //shake button
         clear.addEventListener('click', () => {
-            cell.style.backgroundColor = '#F8F8FF';
+            cell.style.backgroundColor = 'snow';
         });
         
         grid.appendChild(cell);
