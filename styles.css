@@ -1,3 +1,5 @@
+/* messy code is messy */
+
 body {
     font-family: Roboto, sans-serif;
     background-color: lavender;
@@ -10,15 +12,20 @@ body {
 }
 
 header,
-footer,
-#main {
+footer {
     display: flex;
     justify-content: center;
 }
 
 #main {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex: 1; 
     gap: 50px;
+}
+
+.spacer {
+    padding: 75px;
 }
 
 footer {
@@ -31,7 +38,7 @@ footer {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 62px;
     font-weight: bold;
 }
 
@@ -51,8 +58,8 @@ h1 {
 .grid {
     border: 3px solid black;
     display: grid;
-    height: 600px;
-    width: 600px;
+    height: 550px;
+    width: 550px;
 }
 
 .cell {
@@ -108,4 +115,58 @@ h1 {
 
 .btn:hover {
     background-color: snow;
+}
+
+.link {
+    text-decoration: none;
+    color:#e6630b;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    #main {
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .spacer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 850px) {
+    #main {
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .spacer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 { 
+        font-size: 48px;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .grid {
+        height: 450px;
+        width: 450px;
+    }
+
+    .slider {
+        width: 100px;
+    }
 }

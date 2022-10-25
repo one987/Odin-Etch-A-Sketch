@@ -1,6 +1,8 @@
+//I'm still fresh in the programing world so yes this code is messy. Please bear with me. :)
 
 const main = document.querySelector('#main');
 const grid = document.createElement('div');
+const spacer = document.querySelector('.spacer');
 grid.classList.add('grid');
 
 //slider grid resizer
@@ -52,7 +54,8 @@ function createGrid(cr) {
         
         grid.appendChild(cell);
     }
-    main.appendChild(grid);
+    main.insertBefore(grid, spacer);
+    //main.appendChild(grid);
 }
 
 
